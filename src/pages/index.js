@@ -8,7 +8,7 @@ const pageStyles =
   color: "#00d555",
   background: '#202020',
   fontFamily: "Consolas",
-  padding: "1000px",
+  height: "1000px",
 }
 
 const headerStyles =
