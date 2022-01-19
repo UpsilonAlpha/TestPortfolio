@@ -42,7 +42,7 @@ class GifTile extends React.Component
 }
 const IndexPage = () => {
   return (
-<main style={pageStyles}>
+<main style={pageStyles} height="100%">
   <div style={centerImage}>
     <img src={logo} width="100px" padding="0px"/>
   </div>
