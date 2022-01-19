@@ -1,10 +1,11 @@
 import { div } from "prelude-ls"
 import * as React from "react"
 import '../styles/global.css'
+import logo from '../images/UpsilonAlpha.png'
 
 const pageStyles = 
 {
-  color: "#00d555",
+  color: "#CCCCCC",
   background: '#202020',
   padding: "96px",
   paddingBottom: "500px",
@@ -37,7 +38,7 @@ class GifTile extends React.Component
   render() {
     return (
       <div>
-        <img src={'./images/UpsilonAlpha.png'}/>
+        <img src={logo}/>
       </div>
     );
   }
@@ -46,7 +47,7 @@ const IndexPage = () => {
   return (
 <main style={pageStyles}>
   <div style={centerImage}>
-    <img src={'./static/UpsilonAlpha.png'} width="100px" padding="0px"/>
+    <img src={logo} width="100px" padding="0px"/>
   </div>
   <h1 style={headerStyles}>Hi, I'm Ulban!</h1>
   <h1 style={headerStyles}>I make apps and games for nerds!</h1>
