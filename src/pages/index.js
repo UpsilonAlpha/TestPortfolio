@@ -1,35 +1,39 @@
 import { div } from "prelude-ls"
 import * as React from "react"
 import '../styles/global.css'
-import logo from '../images/UpsilonAlpha.png'
+import logo from '../images/Logo.png'
 
 const pageStyles = 
 {
-  color: "#00d555",
-  background: '#202020',
+  color: "#ddffdd",
+  background: '#191515',
   fontFamily: "Consolas",
-  height: "1000px",
 }
 
 const headerStyles =
 {
   textAlign: "center",
   position: "relative",
-  marginTop: "50px"
+  marginTop: "2rem"
 }
 
 const centerText =
 {
   textAlign: "center",
-  padding: "20px"
+  padding: "1rem"
+}
+
+const specialText =
+{
+  color: "#55e575"
 }
 
 const centerImage =
 {
   justifyContent: "center",
-  marginLeft: "46%",
+  marginLeft: "43.5rem",
+  paddingTop: "1.25rem"
 }
-
 // markup
 class GifTile extends React.Component
 {
@@ -44,11 +48,11 @@ class GifTile extends React.Component
 const IndexPage = () => {
   return (
 <main style={pageStyles}>
-  <div style={centerImage}>
-    <img src={logo} width="100px" padding="0px"/>
+  <div style={centerImage} marginTop="auto">
+    <img src={logo} width="75px"/>
   </div>
-  <h1 style={headerStyles}>Hi, I'm Ulban!</h1>
-  <h1 style={headerStyles}>I make apps and games for nerds!</h1>
+  <h1 style={headerStyles}>Hi, I'm <span style={specialText}>Ulban Adhikary</span></h1>
+  <h1 style={headerStyles}>I make games and apps for nerds!</h1>
   <p style={centerText}>Have a look at my projects!</p>
   <GifTile/>
   <GifTile/>
