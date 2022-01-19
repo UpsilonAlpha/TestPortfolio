@@ -1,14 +1,12 @@
 import { div } from "prelude-ls"
 import * as React from "react"
 import '../styles/global.css'
-import logo from '../images/UpsilonAlpha.png'
+import logo from '/static/UpsilonAlpha-59a8a1ec0bfc10ca7409bce85a5b7a46.png'
 
 const pageStyles = 
 {
-  color: "#CCCCCC",
+  color: "#00d555",
   background: '#202020',
-  padding: "96px",
-  paddingBottom: "500px",
   fontFamily: "Consolas",
 }
 
@@ -28,8 +26,7 @@ const centerText =
 const centerImage =
 {
   justifyContent: "center",
-  alignItems: 'center',
-  paddingLeft: "45%"
+  marginLeft: "46%",
 }
 
 // markup
