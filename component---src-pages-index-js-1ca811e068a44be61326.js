@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktest_portfolio=self.webpackChunktest_portfolio||[]).push([[678],{704:function(e,t,l){l.r(t);var n=l(294);t.default=function(){return n.createElement("main",null,n.createElement("h1",{color:"#00FF00"},"Ulban Adhikary"),n.createElement("h2",null,"About me: "),n.createElement("p",null,"I'm a solo developer focusing on educational apps and games."))}}}]);
-//# sourceMappingURL=component---src-pages-index-js-1ca811e068a44be61326.js.map

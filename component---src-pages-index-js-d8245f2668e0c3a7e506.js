@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktest_portfolio=self.webpackChunktest_portfolio||[]).push([[678],{704:function(e,t,l){l.r(t);var n=l(294);t.default=function(){return n.createElement("h1",null,"Hello")}}}]);
-//# sourceMappingURL=component---src-pages-index-js-d8245f2668e0c3a7e506.js.map
