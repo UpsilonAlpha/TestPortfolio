@@ -1,6 +1,6 @@
 import { div } from "prelude-ls"
 import * as React from "react"
-import './global.css'
+import '../global.css'
 import logo from '../images/UpsilonAlpha.png'
 
 const pageStyles = 
