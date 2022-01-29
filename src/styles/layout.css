@@ -1,6 +1,27 @@
-.pageStyles
+.page
 {
-    color: "#ddffdd";
-    background: '#191515';
-    font-family: "Consolas";
+  color: #ddffdd;
+  background: #191515;
+  font-family: Consolas;
+}
+
+.card
+{
+  color: #ddffdd;
+  background: #252020;
+  font-family: Consolas;
+  margin: 5rem;
+  text-decoration: none;
+}
+
+.cardLinks
+{
+  color: #ddffdd;
+  background: #252020;
+  font-family: Consolas;
+  text-decoration: none;
+}
+
+.specialText {
+    color: #55e575;
 }

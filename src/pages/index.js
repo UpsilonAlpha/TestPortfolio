@@ -1,30 +1,43 @@
 import * as React from "react"
 import '../styles/global.css'
+import * as styles from '../styles/layout.css'
 import logo from '../images/Logo.png'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Card, Row, Col, Image} from 'react-bootstrap'
+import {useSpring, animated} from "react-spring"
+import { useState } from 'react'
+import { Link } from "gatsby"
+
 import photogenesis from '../images/Photogenesis.gif'
 import photogenesisThumbnail from '../images/PhotogenesisThumbnail.png'
 import nucleogenesis from '../images/Nucleogenesis.gif'
 import nucleogenesisThumbnail from '../images/NucleogenesisThumbnail.png'
 import gridlock from '../images/Gridlock.gif'
 import gridlockThumbnail from '../images/GridlockThumbnail.png'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import {Card, Row, Col, Image} from 'react-bootstrap'
-import {useSpring, animated} from "react-spring"
-import { useState } from 'react'
+import streak from '../images/Streak.gif'
+import streakThumbnail from '../images/StreakThumbnail.png'
 
 const pageStyles = 
 {
   color: "#ddffdd",
-  background: '#191515',
+  background: '#080808',
   fontFamily: "Consolas",
 }
 
 const cardStyles = 
 {
   color: "#ddffdd",
-  background: '#252020',
+  background: '#151515',
   fontFamily: "Consolas",
   margin: "5rem",
+  boxShadow: "0.5rem 0.5rem 1rem #000000",
+  borderRadius: "4rem"
+}
+
+const linkStyles = 
+{
+  color: "#ddffdd",
+  textDecoration: "none",
 }
 
 const specialText =
@@ -47,23 +60,19 @@ function GifTile(title, gif, thumbnail, description) {
         }}
       >
         <Card style={cardStyles} onMouseOver={() => toggle(true)} onMouseLeave={() => toggle(false)}>
-          <Card.Body>
-            <Card.Title><h3><b>{title}</b></h3></Card.Title>
-            <Image src={state ? gif : thumbnail} width="400rem" fluid/>
-            <br/><br/>
-            <p>{description}</p>
-          </Card.Body>
+          <Link to={title} style={linkStyles}>
+            <Card.Body>
+              <Card.Title><h3><b>{title}</b></h3></Card.Title>
+              <Image src={state ? gif : thumbnail} width="400rem" fluid/>
+              <br/><br/>
+              <p>{description}</p>
+            </Card.Body>
+          </Link>
         </Card>
       </animated.div>
   )
 }
 
-/*const Expand = () => {
-  const props = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } })
-  return props;
-}*/
-
-// markup
 
 const IndexPage = () => {
   return (
@@ -74,11 +83,18 @@ const IndexPage = () => {
     </p>
     <h1>Hi, I'm <span style={specialText}>Ulban Adhikary</span></h1>
     <h1>I make games and apps for learners!</h1><br/>
-    <p>Have a look at my projects!</p><br/><br/>
+    <h5>Check out my projects below!</h5><br/><br/><br/><br/>
+    <h2>Desktop</h2>
     <Row className="g-0">
-    <Col md={6}>
-        {GifTile("Gridlock", gridlock, gridlockThumbnail, "A modern take on the ancient Chinese board game 'Goban' made in C# using WPF. I first made this as a local app as there weren't online versions to play with friends.")}
+      <Col md={6}>
+        {GifTile("Streak", streak, streakThumbnail, "I created a way to use flashcards for group study by designing a gameshow style quiz app! You can build your own or use premade decks.")}
       </Col>
+      <Col md={6}>
+        {GifTile("Gridlock", gridlock, gridlockThumbnail, "A modern take on the ancient Chinese board game 'Goban' made in C# using WPF. I made this to be able to play it with friends.")}
+      </Col>
+    </Row> <br/><br/>
+    <h2>Mobile</h2>
+    <Row className="g-0">
       <Col md={6}>
         {GifTile("Photogenesis", photogenesis, photogenesisThumbnail, "A physics based game that teaches you about physics! My goal with this project was to show why photons take so long to exit the sun.")}
       </Col>
