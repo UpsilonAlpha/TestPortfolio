@@ -1,7 +1,7 @@
 module.exports = {
     pathPrefix: "/TestPortfolio",
     siteMetadata: {
-        siteUrl: `https://www.yourdomain.tld`,
+        siteUrl: `https://upsilonalpha.github.io/TestPortfolio/`,
     },
     plugins: [
         `gatsby-plugin-image`,

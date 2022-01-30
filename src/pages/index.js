@@ -1,6 +1,5 @@
 import * as React from "react"
 import '../styles/global.css'
-import * as styles from '../styles/layout.css'
 import logo from '../images/Logo.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Card, Row, Col, Image} from 'react-bootstrap'
@@ -22,6 +21,7 @@ const pageStyles =
   color: "#ddffdd",
   background: '#080808',
   fontFamily: "Consolas",
+  padding: "0 2.2rem"
 }
 
 const cardStyles = 
@@ -29,9 +29,9 @@ const cardStyles =
   color: "#ddffdd",
   background: '#151515',
   fontFamily: "Consolas",
-  margin: "5rem",
+  margin: "3rem 5rem",
   boxShadow: "0.5rem 0.5rem 1rem #000000",
-  borderRadius: "4rem"
+  borderRadius: "3rem"
 }
 
 const linkStyles = 
@@ -60,7 +60,7 @@ function GifTile(title, gif, thumbnail, description) {
         }}
       >
         <Card style={cardStyles} onMouseOver={() => toggle(true)} onMouseLeave={() => toggle(false)}>
-          <Link to={title} style={linkStyles}>
+          <Link to={"/"+title} style={linkStyles}>
             <Card.Body>
               <Card.Title><h3><b>{title}</b></h3></Card.Title>
               <Image src={state ? gif : thumbnail} width="400rem" fluid/>
@@ -83,7 +83,7 @@ const IndexPage = () => {
     </p>
     <h1>Hi, I'm <span style={specialText}>Ulban Adhikary</span></h1>
     <h1>I make games and apps for learners!</h1><br/>
-    <h5>Check out my projects below!</h5><br/><br/><br/><br/>
+    <h5>Check out my projects below!</h5><br/><br/><br/><br/><br/>
     <h2>Desktop</h2>
     <Row className="g-0">
       <Col md={6}>
@@ -92,7 +92,7 @@ const IndexPage = () => {
       <Col md={6}>
         {GifTile("Gridlock", gridlock, gridlockThumbnail, "A modern take on the ancient Chinese board game 'Goban' made in C# using WPF. I made this to be able to play it with friends.")}
       </Col>
-    </Row> <br/><br/>
+    </Row> <br/><br/><br/>
     <h2>Mobile</h2>
     <Row className="g-0">
       <Col md={6}>
