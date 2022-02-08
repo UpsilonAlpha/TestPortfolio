@@ -25,3 +25,7 @@
 .specialText {
     color: #55e575;
 }
+
+.active {
+  color: #ddffdd;
+}

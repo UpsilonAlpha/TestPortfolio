@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { Container } from 'react-bootstrap'
+import { Container, Image } from 'react-bootstrap'
+import streak from '../images/Streak.gif'
 import "../styles/global.css"
 
 const pageStyles = 
@@ -8,8 +9,10 @@ const pageStyles =
   color: "#ddffdd",
   background: '#080808',
   fontFamily: "Consolas",
-  height: "75rem",
-  padding: "0 15rem",
+  height: "100%",
+  fontSize: "1.5vw",
+  className: "d-flex",
+  textAlign: "center",
 }
 
 const linkStyles = 
@@ -20,10 +23,12 @@ const linkStyles =
 
 const centerDiv =
 {
-  padding: "5rem 5rem",
+  padding: "5rem",
+  width: "75%",
   background: '#151515',
   height: "100%",
   display: "inline-block",
+  textAlign: "left",
 }
 
 // markup
@@ -42,9 +47,11 @@ const Streak = () => {
         </ol><br/>
         <p>Me and a few other classmates used Quizlet to store flashcards. There's an inherent suspense when using humble learning device which makes it perfect for gamification. As a result I did research to find a quizlet API that allowed me to request decks of flashcards in JSON format.</p><br/>
         <p>I then added functionality to save the flashcard deck to one's computer, allowing users to play offline. Then, when playing I read from the JSON file in order to display questions on screen. Players then had to press a 'buzzer' key to be allowed to answer the question.</p><br/>
-
+        <Container className="d-flex justify-content-center">
+          <Image src={streak} width="75%" alt='demonstration of buzzer functionality'/>
+        </Container><br/><br/>
         <p>In order to increase the stakes I also made the text scroll across the screen to emulate a gameshow host reading the question out. I also added a timer after each buzzer press in order to answer the question</p><br/>
-        <p>This project was fundamental for teaching me how to use APIs and JSON in combination with a native app that can read/write to files. I essentially learned all the skills required to make a fully featured desktop application. This foundation helped me a lot with other projects such as making a discord bot.</p>
+        <p>This project was fundamental for teaching me how to use APIs and JSON in combination with a native app that can read/write to files. I essentially learned all the skills required to make a fully featured desktop application. This foundation helped me a lot with other projects that involved API use.</p>
       </Container>
     </main>
   )

@@ -8,8 +8,10 @@ const pageStyles =
   color: "#ddffdd",
   background: '#080808',
   fontFamily: "Consolas",
-  height: "75rem",
-  padding: "0 15rem",
+  height: "100%",
+  fontSize: "1.5vw",
+  className: "d-flex",
+  textAlign: "center",
 }
 
 const linkStyles = 
@@ -20,11 +22,13 @@ const linkStyles =
 
 const centerDiv =
 {
-  padding: "5rem 5rem",
+  padding: "5rem",
+  width: "75%",
   background: '#151515',
   height: "100%",
+  display: "inline-block",
+  textAlign: "left",
 }
-
 // markup
 const Nucleogenesis = () => {
   return (
