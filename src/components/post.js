@@ -20,7 +20,7 @@ const tileStyles =
   textDecoration: "none",
 }
 
-function Post(title, thumbnail, description) {
+function PostTile(title, thumbnail, description, link) {
     const [state, toggle] = useState(false);
     const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 100 } })
     return (
@@ -35,7 +35,7 @@ function Post(title, thumbnail, description) {
             }}
         >
             <Card style={cardStyles} onMouseOver={() => toggle(true)} onMouseLeave={() => toggle(false)}>
-            <Link to={"/"+title} style={tileStyles}>
+            <Link to={"/BlogPosts/"+link} style={tileStyles}>
                 <Card.Body>
                 <Card.Title><h3><b>{title}</b></h3></Card.Title>
                 <Image src={thumbnail} width="400rem" fluid="true"/>
@@ -48,4 +48,4 @@ function Post(title, thumbnail, description) {
     )
 }
 
-export default Post
+export default PostTile

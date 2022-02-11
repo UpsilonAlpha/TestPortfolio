@@ -35,9 +35,10 @@ const IndexPage = () => {
     {Header(true)}
     <br/>
     <h1>Hi, I'm <span style={specialText}>Ulban Adhikary</span></h1>
-    <h1>I make games and apps for learners!</h1><br/>
+    <h1>I make games and apps for learners</h1><br/>
+    <h5>I'm a writer and student based in Brisbane, Australia</h5>
     <h5>Check out my projects below!</h5><br/><br/><br/><br/><br/>
-    <h2>Desktop</h2>
+    <h2>Desktop Apps</h2>
     <Row className="g-0">
       <Col md={6}>
         {GifTile("Streak", streak, streakThumbnail, "A gameshow style quiz app based on flashcards! You can build your own or use premade decks via the API.")}
@@ -46,7 +47,7 @@ const IndexPage = () => {
         {GifTile("Gridlock", gridlock, gridlockThumbnail, "A modern take on the ancient Chinese board game 'Go' made in C# using WPF's UI system and fill algorithms.")}
       </Col>
     </Row> <br/><br/><br/>
-    <h2>Mobile</h2>
+    <h2>Mobile Apps</h2>
     <Row className="g-0">
       <Col md={6}>
         {GifTile("Photogenesis", photogenesis, photogenesisThumbnail, "A project to show why photons take so long to exit the sun using physics-based gameplay.")}

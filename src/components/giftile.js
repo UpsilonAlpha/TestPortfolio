@@ -10,7 +10,7 @@ const cardStyles =
   background: '#151515',
   fontFamily: "Consolas",
   margin: "3rem 5rem",
-  boxShadow: "0.5rem 0.5rem 1rem #000000",
+  boxShadow: "0.5rem 0.5rem 3rem #000000",
   borderRadius: "3rem"
 }
 

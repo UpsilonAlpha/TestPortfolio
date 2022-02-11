@@ -3,7 +3,7 @@ import '../styles/global.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Row, Col} from 'react-bootstrap'
 import Header from "../components/header"
-import Post from "../components/post"
+import PostTile from "../components/post"
 
 import haeckelThumbnail from "../images/BlogPosts/HaeckelThumbnail.jpg"
 import osgovThumbnail from "../images/BlogPosts/OSGovThumbnail.jpg"
@@ -24,7 +24,7 @@ const specialText =
 }
 
 
-const IndexPage = () => {
+const BlogPage = () => {
   return (
   <main style={pageStyles} className="text-center">
     <br/>
@@ -33,21 +33,20 @@ const IndexPage = () => {
     <h1>Blog Posts</h1>
     <Row className="g-0">
       <Col md={6}>
-        {Post("Why we're destroying alien technology", haeckelThumbnail, "Human ignorance is costing us more than we think.")}
+        {PostTile("Why we're destroying alien technology", haeckelThumbnail, "Human ignorance is costing us more than we think.", "AlienTech")}
       </Col>
       <Col md={6}>
-        {Post("Open Source Government", osgovThumbnail, "How to shift to direct democracy in the digital age.")}
-      </Col>
-
-      <Col md={6}>
-        {Post("Voting with your money", votingThumbnail, "How to increase personal agency in social projects.")}
+        {PostTile("Complexity theory", complexityThumbnail, "Why are all of our ethical systems based on humans?", "Complexity")}
       </Col>
       <Col md={6}>
-        {Post("Complexity theory", complexityThumbnail, "Why are all of our ethical systems based on humans?")}
+        {PostTile("Voting with your money", votingThumbnail, "How to increase personal agency in social projects.", "Voting")}
+      </Col>
+      <Col md={6}>
+        {PostTile("Open Source Government", osgovThumbnail, "How to shift to direct democracy in the digital age.", "OSGov")}
       </Col>
     </Row>
   </main>
   );
 }
 
-export default IndexPage
+export default BlogPage
