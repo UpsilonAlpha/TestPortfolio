@@ -35,7 +35,7 @@ function PostTile(title, thumbnail, description, link) {
             }}
         >
             <Card style={cardStyles} onMouseOver={() => toggle(true)} onMouseLeave={() => toggle(false)}>
-            <Link to={"/BlogPosts/"+link} style={tileStyles}>
+            <Link to={"../Posts/"+link} style={tileStyles}>
                 <Card.Body>
                 <Card.Title><h3><b>{title}</b></h3></Card.Title>
                 <Image src={thumbnail} width="400rem" fluid="true"/>
