@@ -33,16 +33,16 @@ const BlogPage = () => {
     <h1>Blog Posts</h1>
     <Row className="g-0">
       <Col md={6}>
-        {PostTile("Why we're destroying alien technology", haeckelThumbnail, "Human ignorance is costing us more than we think.", "AlienTech")}
+        {PostTile("Why we're destroying alien technology", haeckelThumbnail, "Human ignorance is costing us more than we think.", "AlienTech1")}
       </Col>
       <Col md={6}>
-        {PostTile("Complexity theory", complexityThumbnail, "Why are all of our ethical systems based on humans?", "Complexity")}
+        {PostTile("Complexity theory", complexityThumbnail, "Why are all of our ethical systems based on humans?", "Complexity1")}
       </Col>
       <Col md={6}>
-        {PostTile("Voting with your money", votingThumbnail, "How to increase personal agency in social projects.", "Voting")}
+        {PostTile("Voting with your money", votingThumbnail, "How to increase personal agency in social projects.", "Voting1")}
       </Col>
       <Col md={6}>
-        {PostTile("Open Source Government", osgovThumbnail, "How to shift to direct democracy in the digital age.", "OSGov")}
+        {PostTile("Open Source Government", osgovThumbnail, "How to shift to direct democracy in the digital age.", "OSGov1")}
       </Col>
     </Row>
   </main>
